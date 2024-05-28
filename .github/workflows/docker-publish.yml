@@ -34,7 +34,6 @@ jobs:
       # does not support logical AND/OR operations on triggers
       # It's currently not possible to have `branches` under the `schedule` trigger
       - name: Checkout the release branch (on release)
-        if: ${{ github.event_name == 'release' || github.event_name == 'push' }}
         uses: actions/checkout@v4.1.2
         with:
           ref: "release"
